@@ -1,0 +1,18 @@
+﻿Id,Template,Notes
+welcome-new,"Welcome to Scituate. What issue would you like to report? You can say things like 'brown water.' For more examples, say 'help' at any time.",So I keep getting the tide charts and not this dev invocation when I test it.  Can we try Open Scituate Town Hall?  I assume others in town have the tide charts installed. 
+error,"Sorry, I didn't understand that. Please try again or say 'help.'",
+help,"You can say things like 'brown water' or 'pothole.' To exit, say 'goodbye.'",
+goodbye,Goodbye,
+report-confirm,"OK, you want to report {issue-type} for {resident-address}. If that's correct, say ""send."" Otherwise, say ""cancel.""",
+report-sent,"Got it. Your report has been sent to the city. If you want to send another report later, just say 'Open Scituate' to start again.",
+email-from,Jim Grady <turingpolice@gmail.com>,
+email-to,jim@eonconnect.com,Separate multiple addresses by commans - this is the email to use:  publicworks@scituatema.gov <publicworks@scituatema.gov>;
+email-subject,Issue Report: {issue-type},
+email-text,Resident at {resident-address} has reported {issue-type},
+report-cancelled,"OK, your report has been cancelled. If you want to send a report later, just say 'Open Dev Scituate' to start again.",
+town-hall-hours,"Scituate town hall is open Monday, Wednesday and Thurday from 8:30 am to 4:45 pm, it is also open on Tuesday from 8:30am to 7:30pm, and Friday from 8:30am to 11:45am",
+veterans-agent,"The Scituate Veterans agent is Donald Knapp, his phone number is 781-545-8715",
+address-blank,"You've given me permission to access your street address, but you don't have any street address on file. Please open the Alexa app on your phone and go to device settings, then enter your address. When you're done, say ""Alexa, tell Scituate to send my report."" Or if you prefer, just say your street number and name now.",
+no-address-permission,"I need an address to send with the report. You can give me permission to access your address by going to the Alexa app on your phone now, or if you prefer, just say your street address now.",
+address-no-issue,"OK, I've got your address, but I need to know what issue you're reporting. You can say things like 'brown water.' For more examples, say 'help' at any time.",
+,,

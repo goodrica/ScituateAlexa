@@ -1,0 +1,19 @@
+{
+  "name": "baby-weight-tracker",
+  "version": "1.0.1",
+  "private": true,
+  "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
+    "voice-tools": "git@github.com:jimgrady/voice-tools.git#v0.0.3"
+  },
+  "devDependencies": {
+    "bespoken-tools": "^2.1.2",
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4",
+    "virtual-alexa": "^0.7.2",
+    "ngrok": "^3.1.1"
+  },
+  "scripts": {
+    "lint": "eslint ."
+  }
+}

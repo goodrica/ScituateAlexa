@@ -1,0 +1,195 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "scituate",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "ReportIssueIntent",
+          "slots": [
+            {
+              "name": "ReportPhrase",
+              "type": "ReportPhrase"
+            },
+            {
+              "name": "IssueType",
+              "type": "IssueType"
+            },
+            {
+              "name": "Location",
+              "type": "Location"
+            },
+            {
+              "name": "Address",
+              "type": "AMAZON.PostalAddress"
+            }
+          ],
+          "samples": [
+            "{IssueType}",
+            "{ReportPhrase} {IssueType}",
+            "{ReportPhrase} {IssueType} {Location} near {Address}",
+            "{ReportPhrase} {IssueType} {Location} at {Address}",
+            "{ReportPhrase} {IssueType} {Location}"
+          ]
+        },
+        {
+          "name": "ConfirmReportIntent",
+          "slots": [],
+          "samples": [
+            "submit report",
+            "submit",
+            "send report",
+            "send",
+            "confirm report",
+            "confirm"
+          ]
+        },
+        {
+          "name": "CancelReportIntent",
+          "slots": [],
+          "samples": [
+            "cancel report",
+            "cancel"
+          ]
+        },
+        {
+          "name": "TownHallHoursIntent",
+          "slots": [],
+          "samples": [
+            "What time is town hall open",
+            "What are the town hall hours",
+            "When is town hall open"
+          ]
+        },
+        {
+          "name": "VeteransAgentIntent",
+          "slots": [],
+          "samples": [
+            "veterans agent",
+            "who is the scituate veterans agent"
+          ]
+        },
+        {
+          "name": "AddressIntent",
+          "slots": [
+            {
+              "name": "Address",
+              "type": "AMAZON.PostalAddress"
+            }
+          ],
+          "samples": [
+            "{Address}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "IssueType",
+          "values": [
+            {
+              "id": "pothole",
+              "name": {
+                "value": "a pothole",
+                "synonyms": [
+                  "hole"
+                ]
+              }
+            },
+            {
+              "id": "brown-water",
+              "name": {
+                "value": "brown water",
+                "synonyms": [
+                  "gross water",
+                  "bad water"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "ReportPhrase",
+          "values": [
+            {
+              "id": "report",
+              "name": {
+                "value": "report",
+                "synonyms": [
+                  "we'd like to report",
+                  "i'd like to report"
+                ]
+              }
+            },
+            {
+              "id": "there-is",
+              "name": {
+                "value": "there is",
+                "synonyms": [
+                  "we have",
+                  "i have"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Location",
+          "values": [
+            {
+              "id": "street",
+              "name": {
+                "value": "street",
+                "synonyms": [
+                  "in the road",
+                  "on the road",
+                  "in the street",
+                  "on the street",
+                  "on our road",
+                  "on our street"
+                ]
+              }
+            },
+            {
+              "id": "faucet",
+              "name": {
+                "value": "faucet",
+                "synonyms": [
+                  "tap",
+                  "coming from our faucet",
+                  "coming out of our faucet"
+                ]
+              }
+            },
+            {
+              "id": "house",
+              "name": {
+                "value": "house",
+                "synonyms": [
+                  "in our home",
+                  "at our home",
+                  "in our house",
+                  "at our house"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
