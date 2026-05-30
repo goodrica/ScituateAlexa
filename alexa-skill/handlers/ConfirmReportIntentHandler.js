@@ -77,7 +77,7 @@ class ConfirmReportIntentHandler extends SkillBaseIntentHandler {
         let sessionAttributes = this.attributesManager.getSessionAttributes();
         let address = sessionAttributes.issueAddress;
         if (!address) {
-            return this.templateRespond
+            return this.catchRespond('no-address', null);
         }
         let issueType = sessionAttributes.pendingIssue;
         if (!issueType) {

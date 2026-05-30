@@ -5,7 +5,7 @@ class ReportIssueIntentHandler extends SkillBaseIntentHandler {
         return 'ReportIssueIntent';
     }
     process() {
-        let issueValue = this.slotValue('IssueType');
+        let issueValue = this.slotValue('IssueDescription');
         if (issueValue) {
             let sessionAttributes = this.attributesManager.getSessionAttributes();
             sessionAttributes.pendingIssue = issueValue;
