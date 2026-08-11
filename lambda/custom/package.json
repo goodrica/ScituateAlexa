@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@sendgrid/mail": "^7.7.0",
+    "@sendgrid/mail": "^8.1.6",
     "ask-sdk-core": "^2.14.0",
     "ask-sdk-model": "^1.80.0"
   },
