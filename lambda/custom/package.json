@@ -1,0 +1,25 @@
+{
+  "name": "scituate-alexa-skill",
+  "version": "2.0.0",
+  "description": "Scituate town information and issue reporting Alexa skill",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "ask-sdk-core": "^2.14.0",
+    "ask-sdk-model": "^1.80.0"
+  },
+  "devDependencies": {
+    "eslint": "^10.8.1"
+  },
+  "keywords": [
+    "alexa",
+    "skill",
+    "scituate"
+  ],
+  "author": "Andrew Goodrich",
+  "license": "MIT"
+}

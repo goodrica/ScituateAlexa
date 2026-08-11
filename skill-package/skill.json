@@ -1,0 +1,35 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Town information and issue reporting for Scituate residents",
+          "examplePhrases": [
+            "Alexa, open scituate",
+            "Alexa, ask scituate to report a pothole",
+            "Alexa, ask scituate what time town hall is open"
+          ],
+          "keywords": [
+            "Scituate",
+            "town",
+            "government",
+            "report",
+            "pothole",
+            "brown water"
+          ],
+          "name": "Scituate",
+          "description": "Report town issues like potholes and brown water, get town hall hours, veterans agent information, and more for Scituate residents."
+        }
+      },
+      "isAvailableWorldwide": false,
+      "distributionCountries": [
+        "US"
+      ],
+      "testingInstructions": "Say 'Alexa, open scituate' to launch the skill. Try reporting an issue or asking for town hall hours."
+    },
+    "apis": {
+      "custom": {}
+    },
+    "manifestVersion": "1.0"
+  }
+}

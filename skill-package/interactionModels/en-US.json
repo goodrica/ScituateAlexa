@@ -1,0 +1,198 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "scituate",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "ReportIssueIntent",
+          "slots": [
+            {
+              "name": "IssueType",
+              "type": "IssueType"
+            },
+            {
+              "name": "Location",
+              "type": "Location"
+            },
+            {
+              "name": "Address",
+              "type": "AMAZON.PostalAddress"
+            }
+          ],
+          "samples": [
+            "report {IssueType}",
+            "report {IssueType} at {Address}",
+            "report {IssueType} {Location} at {Address}",
+            "there is {IssueType}",
+            "there is {IssueType} at {Address}",
+            "there is {IssueType} {Location} at {Address}",
+            "{IssueType}",
+            "{IssueType} at {Address}"
+          ]
+        },
+        {
+          "name": "ConfirmReportIntent",
+          "slots": [],
+          "samples": [
+            "yes",
+            "confirm",
+            "submit",
+            "send it",
+            "submit report"
+          ]
+        },
+        {
+          "name": "CancelReportIntent",
+          "slots": [],
+          "samples": [
+            "no",
+            "cancel",
+            "never mind"
+          ]
+        },
+        {
+          "name": "AddressIntent",
+          "slots": [
+            {
+              "name": "Address",
+              "type": "AMAZON.PostalAddress"
+            }
+          ],
+          "samples": [
+            "{Address}",
+            "my address is {Address}",
+            "it's at {Address}"
+          ]
+        },
+        {
+          "name": "TownHallHoursIntent",
+          "slots": [],
+          "samples": [
+            "what time is town hall open",
+            "what are the town hall hours",
+            "when is town hall open",
+            "town hall hours"
+          ]
+        },
+        {
+          "name": "VeteransAgentIntent",
+          "slots": [],
+          "samples": [
+            "veterans agent",
+            "who is the scituate veterans agent",
+            "veterans information"
+          ]
+        },
+        {
+          "name": "TrashDayIntent",
+          "slots": [],
+          "samples": [
+            "when is trash day",
+            "what day is trash pickup",
+            "trash day",
+            "recycling day"
+          ]
+        },
+        {
+          "name": "TownMeetingIntent",
+          "slots": [],
+          "samples": [
+            "when is town meeting",
+            "town meeting date",
+            "next town meeting"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "IssueType",
+          "values": [
+            {
+              "id": "pothole",
+              "name": {
+                "value": "pothole",
+                "synonyms": [
+                  "hole in the road",
+                  "hole in the street"
+                ]
+              }
+            },
+            {
+              "id": "brown-water",
+              "name": {
+                "value": "brown water",
+                "synonyms": [
+                  "dirty water",
+                  "bad water",
+                  "discolored water"
+                ]
+              }
+            },
+            {
+              "id": "streetlight",
+              "name": {
+                "value": "streetlight out",
+                "synonyms": [
+                  "light out",
+                  "broken streetlight"
+                ]
+              }
+            },
+            {
+              "id": "fallen-tree",
+              "name": {
+                "value": "fallen tree",
+                "synonyms": [
+                  "tree down",
+                  "tree in the road"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Location",
+          "values": [
+            {
+              "id": "street",
+              "name": {
+                "value": "in the street",
+                "synonyms": [
+                  "on the street",
+                  "in the road",
+                  "on the road"
+                ]
+              }
+            },
+            {
+              "id": "house",
+              "name": {
+                "value": "at my house",
+                "synonyms": [
+                  "at our house",
+                  "at home"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
