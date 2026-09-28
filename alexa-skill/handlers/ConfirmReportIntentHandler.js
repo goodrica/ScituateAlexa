@@ -1,19 +1,5 @@
 const SkillBaseIntentHandler = require('./SkillBaseIntentHandler');
-
-const sgMail = require('@sendgrid/mail');
-// const AWS = require('aws-sdk');
-//
-// AWS.config.update({
-//     region: "us-east-1",
-//     //endpoint: "http://localhost:4000",
-//     credentials: {
-//         accessKeyId: process.env.AWS_KEY,
-//         secretAccessKey: process.env.AWS_SECRET
-//     }
-// });
-
-// create reusable transporter object using the default SMTP transport
-
+const AWS = require('aws-sdk');
 
 class ConfirmReportIntentHandler extends SkillBaseIntentHandler {
     static intentName() {
@@ -26,51 +12,28 @@ class ConfirmReportIntentHandler extends SkillBaseIntentHandler {
             'resident-address': address
         };
 
-        sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-        const msg = {
-            to: this.template('email-to'),
-            from: this.template('email-from', templateData),
-            subject: this.template('email-subject', templateData),
-            text: this.template('email-text', templateData)
-            //,
-            //html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-        };
-        let out = sgMail.send(msg);
-        return out;
-
-/*
-        // Create sendEmail params
         const params = {
             Destination: {
                 ToAddresses: [this.template('email-to')]
             },
             Message: {
                 Body: {
-                    //   Html: {
-                    //     Charset: "UTF-8",
-                    //     Data: htmlBody
-                    //   },
                     Text: {
                         Charset: "UTF-8",
-                        Data: 'scituate test subject', //this.template('email-text')
+                        Data: this.template('email-text', templateData)
                     }
                 },
                 Subject: {
                     Charset: "UTF-8",
-                    Data: 'scituate test body' //this.template('email-subject')
+                    Data: this.template('email-subject', templateData)
                 }
             },
-            Source: 'jim@eonconnect.com' //this.template('email-from')
+            Source: this.template('email-from')
         };
 
-        // Create the promise and SES service object
-        const sendPromise = new AWS.SES({apiVersion: "2010-12-01"})
+        return new AWS.SES({ apiVersion: "2010-12-01", region: "us-east-1" })
             .sendEmail(params)
             .promise();
-
-        // Handle promise's fulfilled/rejected states
-        return sendPromise;
-        */
     }
 
     process() {
